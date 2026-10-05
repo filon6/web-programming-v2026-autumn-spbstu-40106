@@ -1,5 +1,5 @@
-import React, { StrictMode, useState } from 'react';
-import { createRoot } from 'react-dom/client';
+import React, {StrictMode, useState} from 'react';
+import {createRoot} from 'react-dom/client';
 import './styles.css';
 
 function calculate(left, right, operation) {
@@ -103,11 +103,7 @@ function App() {
     const inputValue = Number(display);
     let value = inputValue;
 
-    if (
-      storedValue !== null &&
-      operation !== null &&
-      !waitingForOperand
-    ) {
+    if (storedValue !== null && operation !== null && !waitingForOperand) {
       const result = calculate(storedValue, inputValue, operation);
 
       if (result === null) {
@@ -132,11 +128,7 @@ function App() {
   }
 
   function calculateResult() {
-    if (
-      storedValue === null ||
-      operation === null ||
-      display === 'Ошибка'
-    ) {
+    if (storedValue === null || operation === null || display === 'Ошибка') {
       return;
     }
 
@@ -193,9 +185,7 @@ function App() {
       <h1>Калькулятор</h1>
 
       <div className="display-container">
-        <div className="calculator-expression">
-          {expression || '\u00A0'}
-        </div>
+        <div className="calculator-expression">{expression || '\u00A0'}</div>
 
         <output
           className="calculator-display"
