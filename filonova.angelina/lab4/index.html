@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лабораторная работа 4</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Блог-посты</h1>
+
+      <section class="add-post">
+        <h2>Добавить пост</h2>
+
+        <form data-testid="entity-form">
+          <label for="post-id">ID</label>
+          <input id="post-id" name="id" type="number" required />
+
+          <label for="post-title">Заголовок</label>
+          <input id="post-title" name="title" type="text" required />
+
+          <button type="submit">Добавить пост</button>
+        </form>
+      </section>
+
+      <section
+        class="post-list"
+        data-testid="entity-list"
+        aria-label="Список блог-постов"
+      ></section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
